@@ -1,0 +1,25 @@
+ppo_rollouts: 7e4
+imset: 'subset_train_4'
+num_envs: 40
+num_steps: 5                        
+mini_batch: 10
+action_space: 2
+resume: False
+sample: True
+
+ppo:
+  ppo_epochs: 40
+  clip_param: 0.2
+  gamma: 0.95
+  value_loss_coef: 0.5
+  entropy_coef: 1e-4
+  target_kl_div: 0.02
+  advantages: gae
+
+optim:
+  lr: 1e-5
+  optim_str: Adam
+  
+policy:
+  arch: 'resnet18'
+  dropout: 0.5

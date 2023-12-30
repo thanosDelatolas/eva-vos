@@ -1,0 +1,8 @@
+__pycache__
+data/*
+model_weights/*
+temp.*
+*.out
+wandb/*
+outputs/*
+Experiments/*
