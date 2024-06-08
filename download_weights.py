@@ -4,7 +4,7 @@ import zipfile
 import wget
 
 os.makedirs('./model_weights', exist_ok=True)
-gdown.download('https://drive.google.com/uc?id=1VC3grXMi8ftkVVLD0wFkCLHdeT0tqWfS', output='./model_weights.zip', quiet=False)
+gdown.download('https://drive.google.com/uc?id=1pnOBaNZKSPddBuh9AqM48FFwmw_ln5lT', output='./model_weights.zip', quiet=False)
 
 with zipfile.ZipFile('./model_weights.zip', 'r') as zip_file:
     zip_file.extractall('./')

@@ -51,8 +51,8 @@ else:
     db_root_path = Path.db_root_path(args.db)
     imset = os.path.join(db_root_path, 'ImageSets/2017', f'val.txt')
 
-prop_path =  './model_weights/mivos/stcn_yt_vos.pth'
-fusion_path = './model_weights/mivos/fusion_stcn_yt_vos.pth'
+prop_path =  './model_weights/mivos/stcn.pth'
+fusion_path = './model_weights/mivos/fusion.pth'
 
 """Models"""
 prop_saved = torch.load(prop_path)
@@ -138,7 +138,7 @@ elif args.policy == 'oracle_oracle':
 if args.policy in {'oracle_oracle', 'rand_type', 'rand_rand', 'eva_vos'}:
     policy_results['annotation_actions'] = []
 
-for data in tqdm(dataloader, desc=f'{policy_str}'):
+for data in tqdm(dataloader, desc=f'{policy_str} at {args.db} with {args.rounds} rounds'):
     video_name = data['info']['name']
     ### mask only
     if args.policy == 'qnet_mask':

@@ -1,5 +1,6 @@
 #!/bin/bash	
 
+python download_data.py
 # Mask only experimentis
 python eval_annotation_method.py --policy qnet_mask
 python eval_annotation_method.py --policy oracle_mask

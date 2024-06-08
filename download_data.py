@@ -58,13 +58,13 @@ with open(os.path.join(db_root_path,'ImageSets/val.txt'), 'w+') as fp:
 with open(os.path.join(db_root_path, 'ImageSets/test.txt'), 'w+') as fp:
     fp.write('\n'.join(test_videos))
 
-# DAVIS 17
-data_path = Path.data_path()
-os.makedirs(data_path, exist_ok=True)
-gdown.download('https://drive.google.com/uc?id=1kiaxrX_4GuW6NmiVuKGSGVoKGWjOdp6d', output=os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'), quiet=False)
+# # DAVIS 17
+# data_path = Path.data_path()
+# os.makedirs(data_path, exist_ok=True)
+# gdown.download('https://drive.google.com/uc?id=1kiaxrX_4GuW6NmiVuKGSGVoKGWjOdp6d', output=os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'), quiet=False)
 
-with zipfile.ZipFile(os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'), 'r') as zip_file:
-    zip_file.extractall(data_path)
+# with zipfile.ZipFile(os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'), 'r') as zip_file:
+#     zip_file.extractall(data_path)
 
-os.remove(os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'))
-os.rename(os.path.join(data_path, 'DAVIS'), os.path.join(data_path, 'DAVIS_17'))
+# os.remove(os.path.join(data_path, 'DAVIS-2017-trainval-480p.zip'))
+# os.rename(os.path.join(data_path, 'DAVIS'), os.path.join(data_path, 'DAVIS_17'))
